@@ -115,8 +115,6 @@ RandomForestRegressor(
 
 Trained on the full training set (16,512 rows) using the original 8 numeric + 1 categorical features — no engineered features, per Section 6's finding.
 
-> **Note for maintainers:** `src/train.py` (created earlier in this project) currently trains untuned baseline models for demonstration purposes and does not yet use these tuned hyperparameters. If `src/train.py` is meant to reproduce the final model, it should be updated to match this configuration, and its output filenames aligned with `models/final_model.joblib` / `models/preprocessing_pipeline.joblib` (currently `.pkl`).
-
 ## 9. Final Test Set Evaluation
 
 The tuned model was evaluated exactly once against the test set held out since Section 4.2.
@@ -144,7 +142,6 @@ A sample of individual errors (from `error_analysis.head()`) confirms this quali
 - **No monetary confidence intervals:** the model returns a point estimate only; no prediction interval or uncertainty quantification is provided.
 - **Census-block granularity:** predictions are for district medians (aggregates of many households), not individual homes — the model cannot account for individual-property features like square footage, condition, or amenities, since the dataset doesn't contain them.
 - **1990 data:** the dataset reflects 1990 census-era prices and demographics; it is not representative of current housing markets and shouldn't be used to size real transactions.
-- **`src/train.py` drift:** as noted in Section 8, the productionized training script hasn't yet been synced to the tuned hyperparameters used for the final reported results.
 
 ## 11. Conclusion
 

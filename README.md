@@ -31,15 +31,14 @@ house-price-prediction/
 │   └── preprocessing_pipeline.joblib
 ├── notebooks/
 │   ├── 01_-_eda.ipynb
+│   
+├── src/
 │   ├── 02_-_data_preprocessing.ipynb
 │   ├── 03_-_model_pipelines.ipynb              
-│   ├── 04_-_columnTransformer.ipynb     
+│   ├── 04_-_columnTransformer.py     
 │   ├── 05_-_model_training.ipynb
 │   ├── 06_-_feature_engineering.ipynb
 │   └── 07_-_final_model_evaluation.ipynb
-├── src/
-│   ├── preprocessing.py
-│   └── train.py
 ├── docs/
 │   └── REPORT.md
 ├── requirements.txt
